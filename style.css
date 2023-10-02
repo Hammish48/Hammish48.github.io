@@ -49,6 +49,10 @@ body {
         blink-caret .9s step-end infinite;
 }
 
+.cover-typing-animation{
+    display: fixed;
+}
+
 .cover h3 {
     position: absolute;
     top: 50%;
@@ -60,11 +64,11 @@ body {
 
 @keyframes typing {
     from {
-        width: 0%
+        width: 0px
     }
 
     to {
-        width: 40%
+        width: 640px
     }
 }
 
