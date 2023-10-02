@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <title>My website</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="cover">
+      <div class="cover-typing-animation">
+        <h1>print("Hello I'm Ham");</h1>
+      </div>
+      <div class="cover-links">
+
+      </div>
+      <img src="images/image.jpg" id="cover-photo" />
+    </div>
+    <hr class="divider">
+    <section>
+      <div class="who">
+        <center>
+          <h1 class="section-title">About me</h1>
+        </center>
+        <div class="infobox-collection">
+          <div class="infobox hiding" style="width:600px; height:500px;">
+            <p1 class="infobox-text">I'm Hamish, I'm a amateur programmer and game developer from Australia. I
+              first
+              started
+              learning python around early 2021, since then I have made a few minor games and branched out into other
+              languages such as c# and javascript</p1>
+          </div>
+          <div class="infobox hiding" style="width:600px; height:500px;">
+            <p1 class="infobox-text">I have competed in 3 game jams so far (pyweek 35, GMTK 2023, pyweek 36). I usally
+              use
+              either <a href="https://www.pygame.org/wiki/about">Pygame</a> or <a
+                href="https://godotengine.org/">Godot</a> to
+              create games but I
+              recently started getting
+              into
+              raylib
+              for dotnet. I hope to
+              learn C++ so I can create web games with Raylib</p1>
+          </div>
+          <script>
+            async function getLeetcodeData(user) {
+              let response = await fetch(`https://leetcodestats.cyclic.app/${user}`)
+              let object = await response.json().then((data) => {
+                s = document.getElementById("leetcode-problems")
+                s.textContent = data["totalSolved"]
+              })
+            }
+            getLeetcodeData("hammish")
+          </script>
+          <div class="infobox hiding" style="width:1250px;height:300px">
+            <p1 class="infobox-text">infocard 3</p1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divider" style="background-color: cadetblue;margin-top: 10px;">
+    <section>
+      <div class="projects">
+        <center>
+          <h1 class="section-title">projects</h1>
+        </center>
+      </div>
+      <div class="infobox-collection">
+        <div class="infobox hiding" style="height:700px;width:400px">
+          <p1 class="infobox-text">hello</p1>
+          <img src="images/image.jpg" height="200px" width="200px">
+        </div>
+      </div>
+    </section>
+    <script>
+      window.addEventListener("scroll", showInfoBoxes)
+
+      function showInfoBoxes() {
+        let boxesToShow = document.querySelectorAll(".infobox")
+        for (let c = 0; c < boxesToShow.length; c++) {
+          let height = window.innerHeight
+          const top = boxesToShow[c].getBoundingClientRect().top
+          if (top < height - 100) {
+            boxesToShow[c].classList.remove("hiding")
+          }
+          if (top + 1500 < height) {
+            boxesToShow[c].classList.add("hiding")
+          }
+        }
+      }
+    </script>
+    <footer>
+      <h1>footer</h1>
+    </footer>
+  </div>
+
+</body>
+
+</html>
