@@ -69,9 +69,11 @@
           <div class="infobox hiding" style="height:700px;width:800px">
             <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I
               recently learned Godot but most of my projects are made with pygame. I am currently trying to find a cross
-              platform graphics framework, that doesn't use C++ (I hate C++)</p1>
+              platform graphics framework, that doesn't use C++ (I hate C++) <a href="./pages/projects.html">mmmm</a>
+            </p1>
             <div class="projects-button-container">
-              <button class="projects-page-button">projects</button>
+              <button class="projects-page-button" onclick="gototheprojectspageandstuff()">View
+                All Projects</button>
             </div>
           </div>
         </div>
@@ -92,6 +94,11 @@
             boxesToShow[c].classList.add("hiding")
           }
         }
+      }
+    </script>
+    <script>
+      function gototheprojectspageandstuff() {
+        window.location.href = "./pages/projects"
       }
     </script>
     <footer>

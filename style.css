@@ -159,13 +159,17 @@ body {
     font-variant-east-asian: full-width;
 }
 
-.projects-button-container{
-    background-color: blue;
-    transform: translate(-900%, 80%);
-}
-
 .projects-page-button{
-    height:100px;
+    height:100%;
+    background-color: blue;
+    width:300%;
+    height: 9%;
+    display: inline-block;
+    transform: translate(-265%, 980%);
+    border-radius: 18px;
+    font-size: 20px;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .projects-page-button:hover{
