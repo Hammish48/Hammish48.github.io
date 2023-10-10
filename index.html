@@ -65,11 +65,15 @@
         <center>
           <h1 class="section-title">projects</h1>
         </center>
-      </div>
-      <div class="infobox-collection">
-        <div class="infobox hiding" style="height:700px;width:400px">
-          <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I recently learned Godot but most of my projects are made with pygame. I am currently trying to find a cross platform graphics framework, that doesn't use C++ (I hate C++)</p1>
-          
+        <div class="infobox-collection">
+          <div class="infobox hiding" style="height:700px;width:800px">
+            <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I
+              recently learned Godot but most of my projects are made with pygame. I am currently trying to find a cross
+              platform graphics framework, that doesn't use C++ (I hate C++)</p1>
+            <div class="projects-button-container">
+              <button class="projects-page-button">projects</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -81,10 +85,10 @@
         for (let c = 0; c < boxesToShow.length; c++) {
           let height = window.innerHeight
           const top = boxesToShow[c].getBoundingClientRect().top
-          if (top < height - 100) {
+          if (top < height - 120) {
             boxesToShow[c].classList.remove("hiding")
           }
-          if (top + 1500 < height) {
+          else {
             boxesToShow[c].classList.add("hiding")
           }
         }
