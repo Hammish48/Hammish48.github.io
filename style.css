@@ -44,9 +44,12 @@ body {
     border-right: .15em solid orange;
     white-space: nowrap;
     letter-spacing: 3px;
+}
+
+.cover-animation-play{
     animation:
-        typing 1.6s steps(38, end),
-        blink-caret .9s step-end infinite;
+    typing 1.8s steps(38, end),
+    blink-caret .9s step-end infinite;
 }
 
 .cover-animation-container{

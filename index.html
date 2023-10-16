@@ -10,7 +10,16 @@
   <div class="content">
     <div class="cover">
       <div class="cover-animation-container">
-        <h1>print("Hello I'm Ham");</h1>
+        <script>
+          function playBaseAnimation() {
+            window.addEventListener("load", (e) => {
+              let a = document.getElementById("cover-animation-text")
+              a.classList.add("cover-animation-play")
+            })
+          }
+          playBaseAnimation()
+        </script>
+        <h1 id="cover-animation-text">print("Hello I'm Ham");</h1>
       </div>
       <div class="cover-links">
 
