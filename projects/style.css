@@ -27,7 +27,7 @@ body{
     margin-right: 70px;
     background-color: rgb(186, 186, 186);
     box-shadow: 4px 8px 2px 1px rgba(0, 0, 255, .2);
-    height:100%;
+    display: block;
     overflow-x: hidden;
 }
 
@@ -48,6 +48,7 @@ body{
     align-items: center;
     font-family: "Tilt Neon", sans-serif;
     overflow-y: hidden;
+    margin-bottom: 20px;
 }
 
 .row{
@@ -167,4 +168,13 @@ body{
     background-color: aqua;
     text-align: center;
     font-family: 'Lato', sans-serif;
+}
+
+footer{
+    background-color: black;
+    color: beige;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
 }
