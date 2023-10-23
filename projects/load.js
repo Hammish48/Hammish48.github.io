@@ -122,6 +122,6 @@ row.appendChild(bc)
 
 }
 main()
-console.log(window.innerHeight)
-console.log(923/window.innerHeight*100)
-document.body.style.zoom = `${window.innerHeight/923*100}%`
+if (navigator.userAgentData.mobile){
+    document.body.style.zoom = `${window.innerHeight/923*100}%`
+}
