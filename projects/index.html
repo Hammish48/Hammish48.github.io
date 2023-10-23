@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Projects - Hammish48</title>
+</head>
+
+<body>
+    <script>
+        function redirect(url) {
+            window.location.href = url
+        }
+        function downloadFile(filePath) {
+            const a = document.createElement('a');
+            a.download = filePath;
+            a.href = filePath
+            a.click();
+            a.remove();
+        }
+
+    </script>
+    <div class="content">
+        <div>
+            <button class="home" onclick="redirect('../../')">Return To Home Page</button>
+        </div>
+        <div>
+            <center>
+                <h1 class="section-title">Projects</h1>
+            </center>
+        </div>
+        <div class="projects" id="projects">
+
+        </div>
+        <script src="./load.js"></script>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>
