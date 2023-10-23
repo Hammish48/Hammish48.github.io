@@ -25,6 +25,13 @@
 
       </div>
       <img src="images/image.jpg" id="cover-photo" />
+      <script>
+        let img = document.getElementById("cover-photo");
+        if (!navigator.userAgentData.mobile) {
+          img.style.height = `${window.innerHeight}px`
+          console.log(window.innerHeight)
+        }
+      </script>
     </div>
     <hr class="divider">
     <section>
@@ -43,8 +50,8 @@
           <div class="infobox hiding" style="width:600px; height:500px;">
             <p1 class="infobox-text">I have competed in 3 game jams so far (pyweek 35, GMTK 2023, pyweek 36). I usally
               use
-              either <a href="https://www.pygame.org/wiki/about">Pygame</a> or <a
-                href="https://godotengine.org/">Godot</a> to
+              either <a href="https://www.pygame.org/wiki/about" target="_blank">Pygame</a> or <a
+                href="https://godotengine.org/" target="_blank">Godot</a> to
               create games but I
               recently started getting
               into
