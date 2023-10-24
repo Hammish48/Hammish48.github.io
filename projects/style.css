@@ -92,16 +92,6 @@ body{
     border-radius: 10px;
 }
 
-@media (any-pointer: coarse) {
-    .project{
-        height:500px;
-        width:500px;
-    }
-    .project img{
-        height:500px;
-        width:500px;
-    }
-}
 .project-content-container{
     padding:15px;
     text-align: center;
@@ -146,6 +136,20 @@ body{
 
 .project:hover p1{
     opacity: 100%;
+}
+
+@media (any-pointer: coarse) {
+    .project{
+        height:500px;
+        width:500px;
+    }
+    .project img{
+        height:500px;
+        width:500px;
+    }
+    .project p1{
+        height:340px;
+    }
 }
 
 .project-option-button-container{
