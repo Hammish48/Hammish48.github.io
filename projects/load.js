@@ -44,6 +44,7 @@ projects[1] = new Project(
 )
 projects[2] = projects[1]
 projects[3] = projects[2]
+projects[4] = projects[2]
 
 projects[4] = new Project(
     "A Dying World",
@@ -122,7 +123,3 @@ row.appendChild(bc)
 
 }
 main()
-console.log(window.innerHeight/923*100)
-if (!navigator.userAgentData.mobile){
-    document.body.style.zoom = `${window.innerHeight/923*100}%`
-}
