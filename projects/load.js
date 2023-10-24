@@ -99,6 +99,7 @@ function createRow(){
 }
 
 function main(){
+    projects = projects.reverse()
 let d = document.getElementById("projects")
 let row = createRow()
 d.appendChild(row)
