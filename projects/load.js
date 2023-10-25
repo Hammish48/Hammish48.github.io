@@ -8,6 +8,17 @@ class Project{
     }
 }
 
+function redirect(url) {
+    window.location.href = url
+}
+function downloadFile(filePath) {
+    const a = document.createElement('a');
+    a.download = filePath;
+    a.href = filePath
+    a.click();
+    a.remove();
+}
+
 class Option{
     constructor(color, type){
         this.color = color
@@ -23,7 +34,7 @@ class Download extends Option{
 }
 class Redirect extends Option{
     constructor(name,url, color=[255,255,255]){
-        super(color, "download")
+        super(color, "redirect")
         this.url = url
         this.name = name
     }
@@ -57,7 +68,7 @@ projects[4] = new Project(
     <br> I worked in a team with <a href="https://github.com/reactoimpact"\
         target="_blank">@Reactoimpact</a>',
     "thumbnails/a-dying-world.png",
-    [new Redirect("Download (.exe)", ""),new Redirect("View Source on GitHub", ""),new Redirect("Play In Browser", "")]
+    [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
 )
 
 function createButtonContainer(options){
@@ -67,6 +78,11 @@ function createButtonContainer(options){
         let btn = document.createElement("button")
         btn.className = "project-option-button"
         btn.textContent = options[x].name
+        if (options[x].type == "redirect"){
+            btn.onclick = ()=>{redirect(options[x].url)}
+        }else{
+            btn.onclick = ()=>{downloadFile(options[x].file)}
+        }
         container.appendChild(btn)
     }
     return container
