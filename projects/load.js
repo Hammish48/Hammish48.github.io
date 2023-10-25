@@ -49,7 +49,7 @@ projects[0] = new Project(
 
 projects[1] = new Project(
     "another project",
-    "steals you're ip",
+    "look how sophisticated he is",
     "thumbnails/catsuit.jpg",
     [new Redirect("hhehe", ""),new Redirect("hhehe", ""),new Redirect("hhehe", "")]
 )
@@ -68,7 +68,7 @@ projects[4] = new Project(
     <br> I worked in a team with <a href="https://github.com/reactoimpact"\
         target="_blank">@Reactoimpact</a>',
     "thumbnails/a-dying-world.png",
-    [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
+    [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
 )
 
 function createButtonContainer(options){
