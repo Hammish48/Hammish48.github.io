@@ -13,5 +13,6 @@ for (let x = 0; x<a.length;x++){
 
 
 if (!navigator.userAgentData.mobile){
+    console.log("mobile user")
     document.body.style.zoom = `${window.innerHeight/923*105}%`
 }
