@@ -57,14 +57,7 @@ body{
     display: flex;
 }
 
-@media (any-pointer: coarse) {
-    .row{
-        overflow-x: scroll;
-    }
-    .box-container{
-        transform: translateX(430px);
-    }
-}
+
 
 .box-container{
     height:100%;
@@ -138,19 +131,7 @@ body{
     opacity: 100%;
 }
 
-@media (any-pointer: coarse) {
-    .project{
-        height:500px;
-        width:500px;
-    }
-    .project img{
-        height:500px;
-        width:500px;
-    }
-    .project p1{
-        height:340px;
-    }
-}
+
 
 .project-option-button-container{
     opacity: 0%;

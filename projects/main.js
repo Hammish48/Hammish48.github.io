@@ -13,6 +13,17 @@ for (let x = 0; x<a.length;x++){
 
 
 if (!navigator.userAgentData.mobile){
-    console.log("mobile user")
-    document.body.style.zoom = `${window.innerHeight/923*105}%`
+    console.log("Not a mobile user")
+    document.body.style.zoom = `${window.innerHeight/923*100}%`
+}
+
+if (navigator.userAgentData.mobile){
+    let a = document.getElementsByClassName("row")
+    for (let x = 0; x<a.length;x++){
+        a[x].style.overflowX = "scroll"
+    }
+    a = document.getElementsByClassName("box-container")
+    for (let y = 0; y<a.length;y++){
+        a[y].style.transform = "translateX(430px)"
+    }
 }
