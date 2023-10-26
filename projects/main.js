@@ -26,4 +26,12 @@ if (navigator.userAgentData.mobile){
     for (let y = 0; y<a.length;y++){
         a[y].style.transform = "translateX(430px)"
     }
+    a = document.getElementsByClassName("project")
+    for (let y = 0; y<a.length;y++){
+        let c = a[y].getElementsByTagName("p1")
+        for (let n = 0;n<c.length;n++){
+            c[n].style.height = "340px"
+        }
+    }
+
 }
