@@ -47,6 +47,7 @@ projects[0] = new Project(
     [new Download("download vius","./hello.txt"), new Redirect("rickrol", "youtube.com"), new Redirect("stop", "youtube.com")]
 )
 
+
 projects[1] = new Project(
     "another project",
     "look how sophisticated he is",
@@ -55,7 +56,6 @@ projects[1] = new Project(
 )
 projects[2] = projects[1]
 projects[3] = projects[2]
-projects[4] = projects[2]
 
 projects[4] = new Project(
     "A Dying World",
@@ -71,10 +71,16 @@ projects[4] = new Project(
     [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
 )
 
+projects.push(new Project(
+    "A project with two buttons",
+    "a really sick and epic project that I made that only has two buttons, but that's okay",
+    "thumbnails/catsuit.jpg",
+    [new Download("download vius","./hello.txt"), new Redirect("rickrol", "youtube.com")]))
+
 function createButtonContainer(options){
     container = document.createElement("div")
     container.className = "project-option-button-container"
-    for (let x = 0; x <= 2;x++){
+    for (let x = 0; x <= options.length - 1;x++){
         let btn = document.createElement("button")
         btn.className = "project-option-button"
         btn.textContent = options[x].name
@@ -102,6 +108,17 @@ function createProject(project){
     p.appendChild(pcc)
     element = document.createElement("p1")
     element.innerHTML = project.description
+    if (navigator.userAgentData.mobile){
+        if (project.options.length == 3){
+            element.style.height="340px"
+        }else if (project.options.length == 2){
+            element.style.height="375px"
+        }
+    }else{
+        if (project.options.length == 2){
+            element.style.height="54vh"
+        }
+    }
     pcc.appendChild(element)
     pcc.appendChild(createButtonContainer(project.options))
     return p
