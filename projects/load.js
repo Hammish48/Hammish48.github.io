@@ -49,12 +49,21 @@ projects[0] = new Project(
     []
 )
 
+
+projects.push(new Project(
+    "Placeholder",
+    "placeholder",
+    "thumbnails/roles-reversed.png",
+    [new Download("Download (.exe)", "../downloads/roles-reversed-win.zip"),new Redirect("View on itch.io", "https://ham-sandwich47.itch.io/roles-reversed")]
+))
+
 projects.push(new Project(
     "Roles Reversed",
     "A game made for the <a href='https://itch.io/jam/gmtk-2023' target='_blank'>GMTK 2023</a> game jam which had the theme Roles Reversed <br> It was my second game made it godot and my second ever game jam. The idea of this game is that the roles are reversed so instead of being the player, you are the enemy. <br> not gonna lie the idea sounded a lot better in my head <br> I couldn't think of a name",
     "thumbnails/roles-reversed.png",
     [new Download("Download (.exe)", "../downloads/roles-reversed-win.zip"),new Redirect("View on itch.io", "https://ham-sandwich47.itch.io/roles-reversed")]
 ))
+
 
 projects.push(new Project(
     "A Dying World",
@@ -113,7 +122,7 @@ function createProject(project){
         }
     }else{
         if (project.options.length == 2){
-            element.style.height="53vh"
+            element.style.height="53.1vh"
         }
     }
     pcc.appendChild(element)

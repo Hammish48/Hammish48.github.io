@@ -6,9 +6,12 @@
 if (!navigator.userAgentData.mobile){
 let a = document.getElementsByClassName("project-option-button-container")
 for (let x = 0; x<a.length;x++){
-    a[x].style.transform = `translateY(${(window.innerHeight/-2)+340}px)`
+    a[x].style.transform = `translateY(${(window.innerHeight/-2)+350}px)`
 }
-
+a = document.getElementsByClassName("project")
+for (let x = 0; x<a.length;x++){
+    a[x].style.overflowY = "hidden"
+}
 }
 
 
