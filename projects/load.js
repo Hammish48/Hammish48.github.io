@@ -40,15 +40,12 @@ class Redirect extends Option{
     }
 }
 
-
-
-projects[0] = new Project(
-    "cat",
-    "look how sophisticated he is",
-    "thumbnails/catsuit.jpg",
-    []
-)
-
+projects.push(new Project(
+    "Shadow Jump",
+    "An infinite score platformer were you jump from platform to platform while avoiding the hidden enemies <br> this was made for the pyweek 35 game jam using python and pygame <br> while this game is simple I like that its one of those time killers that you can just open and play",
+    "thumbnails/shadow-jump.png",
+    [new Download("Download (.exe)", "../downloads/shadow-jump-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/shadow-jump"),new Redirect("View pyweek entry", "https://pyweek.org/e/HamSandwich/")]
+))
 
 projects.push(new Project(
     "Placeholder",
@@ -67,7 +64,7 @@ projects.push(new Project(
 
 projects.push(new Project(
     "A Dying World",
-    'A 2d camera platformer made in one week for the pyweek 36 game jam the aim of the game\
+    'A 2d platformer made in one week for the pyweek 36 game jam the aim of the game\
     is to\
     rid the world of <span style="font-weight: bold;">dark matter</span> (which was the\
     theme of\
@@ -136,7 +133,18 @@ function createRow(){
     r.className = "row"
     return r
 }
-
+let r;
+r = Math.round(Math.random() * 10)
+console.log(r)
+if (r%2==1){
+r = Math.floor(Math.random() * (projects.length))
+projects.splice(r, 0, new Project(
+    "cat",
+    "look how sophisticated he is",
+    "thumbnails/catsuit.jpg",
+    []
+))
+}
 function main(){
     projects = projects.reverse()
 let d = document.getElementById("projects")
