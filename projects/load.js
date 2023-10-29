@@ -40,24 +40,23 @@ class Redirect extends Option{
     }
 }
 
+
+
 projects[0] = new Project(
-    "A project",
-    "a really sick and epic project that I made",
-    "thumbnails/catsuit.jpg",
-    [new Download("download vius","./hello.txt"), new Redirect("rickrol", "youtube.com"), new Redirect("stop", "youtube.com")]
-)
-
-
-projects[1] = new Project(
-    "another project",
+    "cat",
     "look how sophisticated he is",
     "thumbnails/catsuit.jpg",
-    [new Redirect("hhehe", ""),new Redirect("hhehe", ""),new Redirect("hhehe", "")]
+    []
 )
-projects[2] = projects[1]
-projects[3] = projects[2]
 
-projects[4] = new Project(
+projects.push(new Project(
+    "Roles Reversed",
+    "A game made for the <a href='https://itch.io/jam/gmtk-2023' target='_blank'>GMTK 2023</a> game jam which had the theme Roles Reversed <br> It was my second game made it godot and my second ever game jam. The idea of this game is that the roles are reversed so instead of being the player, you are the enemy. <br> not gonna lie the idea sounded a lot better in my head <br> I couldn't think of a name",
+    "thumbnails/roles-reversed.png",
+    [new Download("Download (.exe)", "../downloads/roles-reversed-win.zip"),new Redirect("View on itch.io", "https://ham-sandwich47.itch.io/roles-reversed")]
+))
+
+projects.push(new Project(
     "A Dying World",
     'A 2d camera platformer made in one week for the pyweek 36 game jam the aim of the game\
     is to\
@@ -69,13 +68,8 @@ projects[4] = new Project(
         target="_blank">@Reactoimpact</a>',
     "thumbnails/a-dying-world.png",
     [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
-)
+))
 
-projects.push(new Project(
-    "A project with two buttons",
-    "a really sick and epic project that I made that only has two buttons, but that's okay",
-    "thumbnails/catsuit.jpg",
-    [new Download("download vius","./hello.txt"), new Redirect("rickrol", "youtube.com")]))
 
 function createButtonContainer(options){
     container = document.createElement("div")
@@ -90,6 +84,9 @@ function createButtonContainer(options){
             btn.onclick = ()=>{downloadFile(options[x].file)}
         }
         container.appendChild(btn)
+    }
+    if (options.length == 0){
+        container.style.display = "none"
     }
     return container
 }
@@ -112,11 +109,11 @@ function createProject(project){
         if (project.options.length == 3){
             element.style.height="340px"
         }else if (project.options.length == 2){
-            element.style.height="375px"
+            element.style.height="365px"
         }
     }else{
         if (project.options.length == 2){
-            element.style.height="54vh"
+            element.style.height="53vh"
         }
     }
     pcc.appendChild(element)
