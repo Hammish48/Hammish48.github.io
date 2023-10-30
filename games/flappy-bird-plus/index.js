@@ -221,7 +221,7 @@ function setup() {
   }else{
   player.highscore = [localStorage.getItem("highscoree"), localStorage.getItem("highscorem"), localStorage.getItem("highscoreh")];
   }
-  if (localStorage.getItem("money")=='null'){
+  if (localStorage.getItem("money")=='null' || localStorage.getItem("money")==null){
     player.money = 0
   }else{
   player.money = localStorage.getItem("money")
