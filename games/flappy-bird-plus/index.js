@@ -40,11 +40,24 @@ let birds;
 //    birds = result["birds"]
 //  }
 //})
-//this fills my body with an indescribable amount of anger
 birds =[new Bird("bird", 0),new Bird("bird-2", 80),new Bird("bird-3", 250),new Bird("bird-4", 630),new Bird("bird-5", 1499),new Bird("bird-6", 2999),new Bird("bird-8", 499, true), new Bird("bird-10", 499, true),new Bird("bird-7", 100, true),new Bird("bird-9", 2000000000000, true)];
+if (localStorage.getItem("birds")!=null){
+  const o = localStorage.getItem("birds")
+  console.log(o)
+  for (let x=0;x<=9;x++){
+    if (o[x] == "1"){
+      birds[x].owned = true
+    }
+    else{
+      birds[x].owned = false
+    }
+    console.log(birds[x])
+  }
+}
+//this fills my body with an indescribable amount of anger
 function preload(){
-  sprite = loadImage("/assets/img/birds/bird.png");
-  pillarSprite = loadImage("/assets/img/pillar.png");
+  sprite = loadImage("./assets/img/birds/bird.png");
+  pillarSprite = loadImage("./assets/img/pillar.png");
   helv = loadFont("./assets/img/Helvetica.ttf");
   helvBold = loadFont("./assets/img/Helvetica-Bold.ttf");
   cloud = loadImage("./assets/img/cloud.png");
@@ -189,20 +202,30 @@ function setup() {
   colorMode(RGB)
   frameRate(60);
   player = new Player();
-  chrome.storage.local.get(["highscore"], function(result){
-    if (result["highscore"] === undefined){
-    player.highscore = [0, 0, 0];
-    }else{
-      player.highscore =result["highscore"];
-    }
-  })
-  chrome.storage.local.get(["money"], function(result){
-    if (result["money"] === undefined){
+  //chrome.storage.local.get(["highscore"], function(result){
+  //  if (result["highscore"] === undefined){
+  //  player.highscore = [0, 0, 0];
+  //  }else{
+  //    player.highscore =result["highscore"];
+  //  }
+  //})
+  //chrome.storage.local.get(["money"], function(result){
+  //  if (result["money"] === undefined){
+  //  player.money = 0
+  //  }else{
+  //    player.money =result["money"]
+  //  }
+  //})
+  if (localStorage.getItem("highscoree")=='null'){
+    player.highscore=[0,0,0]
+  }else{
+  player.highscore = [localStorage.getItem("highscoree"), localStorage.getItem("highscorem"), localStorage.getItem("highscoreh")];
+  }
+  if (localStorage.getItem("money")=='null'){
     player.money = 0
-    }else{
-      player.money =result["money"]
-    }
-  })
+  }else{
+  player.money = localStorage.getItem("money")
+  }
   // probably an easier way to do this
   pillars = [new Pillar(700, -30,190), new Pillar(930, -70,210), new Pillar(1160, -140,190), new Pillar(1390, -140,200)];
   clouds= [new Cloud(200, 230), new Cloud(290, 130),new Cloud(580, 180),new Cloud(850, 100)]
@@ -340,8 +363,6 @@ function gameloop(){
   player.render()
   if (player.cv3.y == 10){
   if (player.showHitboxes){rect(player.hitbox[0], player.hitbox[1], player.hitbox[2], player.hitbox[3])}
-  pillars.forEach(pillar=>{
-  })
 }
   push();
   textFont(helv);
@@ -593,15 +614,32 @@ function title(){
 
 
 function backup(){
-  chrome.storage.local.set({ "highscore": player.highscore });
-  chrome.storage.local.set({ "money": player.money });
-  chrome.storage.local.set({ "birds": birds })
+  //chrome.storage.local.set({ "highscore": player.highscore });
+  //chrome.storage.local.set({ "money": player.money });
+  //chrome.storage.local.set({ "birds": birds })
+  localStorage.setItem("highscoree", player.highscore[0])
+  localStorage.setItem("highscorem", player.highscore[1])
+  localStorage.setItem("highscoreh", player.highscore[2])
+  localStorage.setItem("money", player.money)
+
+  let o = "";
+  birds.forEach(bird=>{
+    if (bird.owned){
+      o += "1"
+    }
+    else{
+      o += "0"
+    }
+  })
+  localStorage.setItem("birds", o)
 }
 
 function clearSave(){
-  chrome.storage.local.set({ "highscore": undefined });
-  chrome.storage.local.set({ "money": undefined });
-  chrome.storage.local.set({ "birds": undefined });
+  localStorage.setItem("highscoree", 0)
+  localStorage.setItem("highscorem", 0)
+  localStorage.setItem("highscoreh", 0)
+  localStorage.setItem("money", 0)
+  localStorage.setItem("birds", "1000000000")
   player.highscore = [0,0,0];
   player.money = 0;
   birds =[new Bird("bird", 0),new Bird("bird-2", 80),new Bird("bird-3", 250),new Bird("bird-4", 630),new Bird("bird-5", 1499),new Bird("bird-6", 2999),new Bird("bird-8", 499, true), new Bird("bird-10", 499, true),new Bird("bird-7", 100, true),new Bird("bird-9", 2000000000000, true)];
@@ -706,6 +744,9 @@ function shopMenu(){
 
 
 function buyScreen(){
+  if (!mouseIsPressed){
+    clickCooldown = false
+  }
   buyBtn = new Button(120, 300, "buyBtn", 100, 50)
   cancelBtn = new Button(120, 360, "buyBtn", 100, 50)
   if (buyBtn.isClicked()){
@@ -713,7 +754,6 @@ function buyScreen(){
     birds[item].owned = true
     buyscrn = false
     clickCooldown = true
-    backup()
   }
   else if (cancelBtn.isClicked()){
     buyscrn = false
@@ -728,6 +768,7 @@ function buyScreen(){
   image(cancelImg, 120, 360, 100, 50)
   image(birds[item].sprite, 120, 200, 75, 50)
   text(`cost: ${birds[item].price}`, 120, 280)
+  backup();
 }
 
 

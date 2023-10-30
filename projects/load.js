@@ -9,7 +9,11 @@ class Project{
 }
 
 function redirect(url) {
-    window.location.href = url
+    const a = document.createElement('a');
+    a.target = "_blank"
+    a.href = url
+    a.click();
+    a.remove();
 }
 function downloadFile(filePath) {
     const a = document.createElement('a');
@@ -42,9 +46,9 @@ class Redirect extends Option{
 
 projects.push(new Project(
     "Flappy Bird Plus",
-    "An infinite score platformer were you jump from platform to platform while avoiding the hidden enemies <br> this was made for the pyweek 35 game jam using python and pygame <br> while this game is simple I like that its one of those time killers that you can just open and play",
-    "thumbnails/shadow-jump.png",
-    [new Download("Download (.exe)", "../downloads/shadow-jump-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/shadow-jump"),new Redirect("View pyweek entry", "https://pyweek.org/e/HamSandwich/")]
+    "A recreation of flappy bird I made to see how easy it is to make a chrome extension <br> then I added a shop because why not",
+    "thumbnails/flappy bird.png",
+    [new Redirect("Play In Browser", "../games/flappy-bird-plus"),new Redirect("View on Chrome Web store", "https://chrome.google.com/webstore/detail/flappy-bird-game/jhdmjggpjbhlpdehmabpibpfgmnmdohb")]
 ))
 
 projects.push(new Project(
