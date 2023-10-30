@@ -216,7 +216,7 @@ function setup() {
   //    player.money =result["money"]
   //  }
   //})
-  if (localStorage.getItem("highscoree")=='null'){
+  if (localStorage.getItem("highscoree")=='null' || localStorage.getItem("highscoree")==null){
     player.highscore=[0,0,0]
   }else{
   player.highscore = [localStorage.getItem("highscoree"), localStorage.getItem("highscorem"), localStorage.getItem("highscoreh")];
