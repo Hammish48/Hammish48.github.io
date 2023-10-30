@@ -581,7 +581,7 @@ function HomeScreen(){
   image(coinImg, 590, 10);
   textSize(20);
   modeCheck();
-  text(player.money, 620, 30)
+  text(player.money.toString(), 620, 30)
   switch (mode){
     case 1:
       image(easyImg, 160, 20);
