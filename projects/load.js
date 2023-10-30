@@ -41,6 +41,13 @@ class Redirect extends Option{
 }
 
 projects.push(new Project(
+    "Flappy Bird Plus",
+    "An infinite score platformer were you jump from platform to platform while avoiding the hidden enemies <br> this was made for the pyweek 35 game jam using python and pygame <br> while this game is simple I like that its one of those time killers that you can just open and play",
+    "thumbnails/shadow-jump.png",
+    [new Download("Download (.exe)", "../downloads/shadow-jump-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/shadow-jump"),new Redirect("View pyweek entry", "https://pyweek.org/e/HamSandwich/")]
+))
+
+projects.push(new Project(
     "Shadow Jump",
     "An infinite score platformer were you jump from platform to platform while avoiding the hidden enemies <br> this was made for the pyweek 35 game jam using python and pygame <br> while this game is simple I like that its one of those time killers that you can just open and play",
     "thumbnails/shadow-jump.png",
