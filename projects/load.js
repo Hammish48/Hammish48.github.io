@@ -59,15 +59,22 @@ projects.push(new Project(
 ))
 
 projects.push(new Project(
-    "Placeholder",
-    "placeholder",
-    "thumbnails/roles-reversed.png",
-    [new Download("Download (.exe)", "../downloads/roles-reversed-win.zip"),new Redirect("View on itch.io", "https://ham-sandwich47.itch.io/roles-reversed")]
+    "Hostile Horizon",
+    "A simple 3d fps game I made while learning Godot were you shoot at enemies that spawn on the edge of the map<br> thats basically it",
+    "thumbnails/hostile horizon.png",
+    [new Download("Download (.exe)", "../downloads/hostile-horizon-win.zip")]
+))
+
+projects.push(new Project(
+    "Pygame Cookie clicker",
+    "a recreation of Orteils masterpiece, <span><a target='_blank' href='https://orteil.dashnet.org/cookieclicker/'>Cookie Clicker</a></span> I made using pygame and python <br><br> this is probably my favorite pygame project as of today, If I make something better I will update this <br><br>this was the most amount of art I had to make for a game and I enjoyed it quite a bit <br><br> <a href='https://youtu.be/5vX9A0XTc6I' target='_blank'>music is space jazz by kevin macleod</a><br> <span style='color:red'>Note: certain features such as saving, offline cookie production and sound have been disabled on web</span>",
+    "thumbnails/cookie-clicker.png",
+    [new Download("Download (.exe)", "../downloads/hostile-horizon-win.zip"), new Redirect("Play in Browser", "../games")]
 ))
 
 projects.push(new Project(
     "Roles Reversed",
-    "A game made for the <a href='https://itch.io/jam/gmtk-2023' target='_blank'>GMTK 2023</a> game jam which had the theme Roles Reversed <br> It was my second game made it godot and my second ever game jam. The idea of this game is that the roles are reversed so instead of being the player, you are the enemy. <br> not gonna lie the idea sounded a lot better in my head <br> I couldn't think of a name",
+    "A game made for the <a href='https://itch.io/jam/gmtk-2023' target='_blank'>GMTK 2023</a> game jam which had the theme Roles Reversed <br> It was my second game made in godot and my second ever game jam. The idea of this game is that the roles are reversed so instead of being the player, you are the enemy. <br> not gonna lie the idea sounded a lot better in my head <br> I couldn't think of a name",
     "thumbnails/roles-reversed.png",
     [new Download("Download (.exe)", "../downloads/roles-reversed-win.zip"),new Redirect("View on itch.io", "https://ham-sandwich47.itch.io/roles-reversed")]
 ))
@@ -131,6 +138,9 @@ function createProject(project){
     }else{
         if (project.options.length == 2){
             element.style.height="53.1vh"
+        }
+        if (project.options.length == 1){
+            element.style.height="56.1vh"
         }
     }
     pcc.appendChild(element)
