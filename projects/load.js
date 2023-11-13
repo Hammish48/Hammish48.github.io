@@ -48,14 +48,14 @@ projects.push(new Project(
     "Flappy Bird Plus",
     "A recreation of flappy bird I made to see how easy it is to make a chrome extension <br> then I added a shop because why not",
     "thumbnails/flappy bird.png",
-    [new Redirect("Play In Browser", "../games/flappy-bird-plus"),new Redirect("View on Chrome Web store", "https://chrome.google.com/webstore/detail/flappy-bird-game/jhdmjggpjbhlpdehmabpibpfgmnmdohb")]
+    [new Redirect("Play In Browser", "../play/flappy-bird-plus"),new Redirect("View on Chrome Web store", "https://chrome.google.com/webstore/detail/flappy-bird-game/jhdmjggpjbhlpdehmabpibpfgmnmdohb")]
 ))
 
 projects.push(new Project(
     "Shadow Jump",
     "An infinite score platformer were you jump from platform to platform while avoiding the hidden enemies <br> this was made for the pyweek 35 game jam using python and pygame <br> while this game is simple I like that its one of those time killers that you can just open and play",
     "thumbnails/shadow-jump.png",
-    [new Download("Download (.exe)", "../downloads/shadow-jump-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/shadow-jump"),new Redirect("View pyweek entry", "https://pyweek.org/e/HamSandwich/")]
+    [new Download("Download (.exe)", "../downloads/shadow-jump-win.zip"),new Redirect("Play In Browser (Experimental)", "../play/shadow-jump"),new Redirect("View pyweek entry", "https://pyweek.org/e/HamSandwich/")]
 ))
 
 projects.push(new Project(
@@ -69,7 +69,7 @@ projects.push(new Project(
     "Pygame Cookie clicker",
     "a recreation of Orteils masterpiece, <span><a target='_blank' href='https://orteil.dashnet.org/cookieclicker/'>Cookie Clicker</a></span> I made using pygame and python <br><br> this is probably my favorite pygame project as of today, If I make something better I will update this <br><br>this was the most amount of art I had to make for a game and I enjoyed it quite a bit <br><br> <a href='https://youtu.be/5vX9A0XTc6I' target='_blank'>music is space jazz by kevin macleod</a><br> <span style='color:red'>Note: certain features such as saving, offline cookie production and sound have been disabled on web</span>",
     "thumbnails/cookie-clicker.png",
-    [new Download("Download (.exe)", "../downloads/hostile-horizon-win.zip"), new Redirect("Play in Browser", "../games")]
+    [new Download("Download (.exe)", "../downloads/hostile-horizon-win.zip"), new Redirect("Play in Browser", "../play/cookie-clicker")]
 ))
 
 projects.push(new Project(
@@ -91,7 +91,7 @@ projects.push(new Project(
     <br> I worked in a team with <a href="https://github.com/reactoimpact"\
         target="_blank">@Reactoimpact</a>',
     "thumbnails/a-dying-world.png",
-    [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser (Experimental)", "../games/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
+    [new Download("Download (.exe)", "../downloads/a-dying-world-win.zip"),new Redirect("Play In Browser (Experimental)", "../play/a-dying-world"),new Redirect("View Source on GitHub", "https://github.com/Hammish48/pyweek36")]
 ))
 
 
