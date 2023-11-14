@@ -44,10 +44,17 @@ class Redirect extends Option{
     }
 }
 
+projects.push(new Project(
+    "Game I don't have a name for",
+    "My first ever game <br> its a simple score game that I made ages ago, you control the green square with the arrow keys and avoid hitting the red squares <br> as for the name, I genuinly just called it 'Game I don't have a name for' when I made it and now I feel like it would be wrong if I named it <br> I like looking at this because its a reminder on how far I've come",
+    "thumbnails/unnamed game.png",
+    [new Redirect("Play In Browser", "../play/unnamed-game")]
+))
+
 
 projects.push(new Project(
     "King Of The Key",
-    "A platformer were you collect keys that unlock a goal while avoiding spikes <br> this was my first big project and it took me way longer than it should have <br> it isn't great, the physics engine is bad and the code is written quite poorly but I remember having a lot of fun making it",
+    "A platformer were you collect keys that unlock a goal while avoiding spikes <br> this was my first big project and it took me way longer than it should have <br> it isn't great, the physics engine is bad and the code is written quite poorly but I remember having a lot of fun making it <br> I plan on remaking this sometime in the future",
     "thumbnails/king of the key.png",
     [new Redirect("Play In Browser", "../play/king-of-the-key")]
 ))
