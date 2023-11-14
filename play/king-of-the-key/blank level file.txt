@@ -1,0 +1,13 @@
+const startingscreen = {
+  blocks: [],
+  spikes: [],
+  startpos: [],
+  blockstartpos: [],
+  blockMovLimits: [],
+  block2startpos: [],
+  blockMov2Limits: [],
+  collectables: [],
+  goalpos: [],
+  texts: []
+  zaps:[]
+}

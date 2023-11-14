@@ -1,0 +1,4 @@
+x1, y1, x2, y2, x3, y3
+x1: the x coordinate of the top of your triangle must be inbetween x2 and x3
+y1: the y coordinate of the top of your triangle
+x2: the width of your triangle

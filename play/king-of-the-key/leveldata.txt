@@ -1,0 +1,5 @@
+format [startx, [movingblockx, movingblocky, movingblocklimit1, movingblocklimit2]]
+
+note:
+lol forgot about this this is definitly not what I used 
+I don't think anyone will see this but if you do, Hi ig

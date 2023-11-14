@@ -44,6 +44,14 @@ class Redirect extends Option{
     }
 }
 
+
+projects.push(new Project(
+    "King Of The Key",
+    "A platformer were you collect keys that unlock a goal while avoiding spikes <br> this was my first big project and it took me way longer than it should have <br> it isn't great, the physics engine is bad and the code is written quite poorly but I remember having a lot of fun making it",
+    "thumbnails/king of the key.png",
+    [new Redirect("Play In Browser", "../play/king-of-the-key")]
+))
+
 projects.push(new Project(
     "Flappy Bird Plus",
     "A recreation of flappy bird I made to see how easy it is to make a chrome extension <br> then I added a shop because why not",
@@ -69,7 +77,7 @@ projects.push(new Project(
     "Pygame Cookie clicker",
     "a recreation of Orteils masterpiece, <span><a target='_blank' href='https://orteil.dashnet.org/cookieclicker/'>Cookie Clicker</a></span> I made using pygame and python <br><br> this is probably my favorite pygame project as of today, If I make something better I will update this <br><br>this was the most amount of art I had to make for a game and I enjoyed it quite a bit <br><br> <a href='https://youtu.be/5vX9A0XTc6I' target='_blank'>music is space jazz by kevin macleod</a><br> <span style='color:red'>Note: certain features such as saving, offline cookie production and sound have been disabled on web</span>",
     "thumbnails/cookie-clicker.png",
-    [new Download("Download (.exe)", "../downloads/hostile-horizon-win.zip"), new Redirect("Play in Browser", "../play/cookie-clicker")]
+    [new Download("Download (.exe)", "../downloads/cookie-clicker-win-2.7.zip"), new Redirect("Play in Browser", "../play/cookie-clicker")]
 ))
 
 projects.push(new Project(

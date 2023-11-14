@@ -1,0 +1,123 @@
+omg notes insane
+I'm just gonna write everything I think about with this level and all my ideas
+idrc if anyone reads it
+
+probably gonna add one or two more things I was thinking to add a fully solid block with a collider that is on all sides but that sounds kinda hard
+
+I also wanna add invisible blocks idk if that will be hard
+
+it wasn't that hard
+
+I think maybe if I use a mix of the code from the block collision system and the function that checks if I'm collecting a key I can do the fully solid block
+
+
+I'll see
+
+
+I'm currently builfing level three rn I hope that all the levels don't take long
+
+gonna implement:
+
+double spikes at level 3
+moving blocks at level 5
+invis blocks at level 6
+triple spikes at level nine but only maybe because those are really hard
+
+
+I honestly probably won't do the all sides collider thing because I can't really see a use for it apart from blocking something off or a head hitter jump
+
+
+10/80/22 things I still need to do:
+build levels 3-10
+add the title screen
+make a way to put in a game over screen
+add the proper death screen
+add the end/spash screen
+
+honestly I'm getting there
+just a lot of level building to do
+
+
+I'm thinking to add a bonus heart just in case the levels get to hard, I have already added a yellow heart for the fifth one but I wanna make a in game collectable that increases your lives
+
+I'll probably copy the code for the key collectable if I implement this
+
+
+I kinda wanna add a teleporter, I don't think that would be too hard because it only needs a collision system and a thing that sets the players y coordinate
+
+ok there was a small bug with the teleporters but I fixed it and now they work
+the problem was that the teleporter would make an infinite loop if you just did player_y = teleport y
+so I originally did: player_y = teleportY + 50
+but that still overlapped so I did:
+player_y = teleport_y + 51
+but that had an annoying glitch for a while were I would pass through blocks and I wouldn't be able to jump but then I remembered that the player need to be at a position that is a multiple of 5 because when you fall you go down five pixels each frame
+
+
+ok gonna change what I said before:
+gonna implement teleporters at level 4
+invis blocks at level 5
+moving blocks at level 6
+
+
+I could make it so when you get a key you get another life but at the same time I feel like that would make it wayyyy to easy
+
+
+I ended up adding invis blocks in level four kinda by accidentt but I'm gonna keep it anyway and add teleporters at level 5
+
+started adding some textures today I added the:
+locked goal
+unlocked goal
+teleporters
+key
+and player
+
+
+was gonna add some kevin macloud music in the background but p5 doesn't like big sound files for some reason, when I tried to play the file it kept glitching
+
+just finished level 5, 10 more to go
+
+gonna try and grind out the levels, I can probably get this whole thing done before this time next week its currently 10/31/22
+yes I'm doing this on halloween
+
+I've decided to have four modes, easy, normal, hard and speed mode
+
+
+started level 9 gonna add triple spikes
+now that there is the mode with infinite respawns
+
+
+
+to do:
+add death screen
+add game over screen
+add title screen:
+    add info
+    add modes
+    add credits
+add sounds
+add end screen
+some fun easter eggs
+
+
+to do updated:
+add more skins (maybe)
+add title screen:
+    add info
+    add credits
+add sounds
+add end screen
+some fun easter eggs
+
+to do updated X2:
+add more skins (maybe)
+add sounds
+add end screen
+some fun easter eggs
+
+to do updated X3:
+add sounds
+
+I've added all the sound effects now
+I just found a way to play big audio files lessgooooooo
+
+I think that the game is done, I love this project a lot but I'm happy its finished
