@@ -8,9 +8,11 @@ class Project{
     }
 }
 
-function redirect(url) {
+function redirect(url, newTab=true) {
     const a = document.createElement('a');
+    if (newTab){
     a.target = "_blank"
+    }
     a.href = url
     a.click();
     a.remove();
@@ -152,10 +154,10 @@ function createProject(project){
         }
     }else{
         if (project.options.length == 2){
-            element.style.height="53.1vh"
+            element.style.height="384px"
         }
         if (project.options.length == 1){
-            element.style.height="56.1vh"
+            element.style.height="416px"
         }
     }
     pcc.appendChild(element)
@@ -171,7 +173,6 @@ function createRow(){
 }
 let r;
 r = Math.round(Math.random() * 10)
-console.log(r)
 if (r%2==1){
 r = Math.floor(Math.random() * (projects.length))
 projects.splice(r, 0, new Project(
@@ -191,8 +192,6 @@ bc.className = "box-container"
 pointer = 0
 projects.forEach(p =>{
     bc.appendChild(createProject(p))
-    console.log("project successfully created")
-    console.log(pointer)
     pointer ++
     if (pointer >=3){
         row.appendChild(bc)

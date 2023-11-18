@@ -12,14 +12,15 @@
       <div class="cover-animation-container">
         <script>
           function playBaseAnimation() {
-            window.addEventListener("load", (e) => {
-              let a = document.getElementById("cover-animation-text")
-              a.classList.add("cover-animation-play")
-            })
+            let a = document.getElementById("cover-animation-text")
+            a.classList.add("cover-animation-play")
+            a.style.opacity = "100%"
           }
-          playBaseAnimation()
+          window.addEventListener("load", (e) => {
+            setTimeout(playBaseAnimation, 1000)
+          })
         </script>
-        <h1 id="cover-animation-text">print("Hello I'm Ham");</h1>
+        <h1 id="cover-animation-text">printf("Hello I'm Ham");</h1>
       </div>
       <div class="cover-links">
 
@@ -30,6 +31,17 @@
         if (!navigator.userAgentData.mobile) {
           img.style.height = `${window.innerHeight}px`
           console.log(window.innerHeight)
+        }
+      </script>
+      <script>
+        function redirect(url, newTab = true) {
+          const a = document.createElement('a');
+          if (newTab) {
+            a.target = "_blank"
+          }
+          a.href = url
+          a.click();
+          a.remove();
         }
       </script>
     </div>
@@ -70,7 +82,11 @@
             getLeetcodeData("hammish")
           </script>
           <div class="infobox hiding" style="width:1250px;height:300px">
-            <p1 class="infobox-text">infocard 3</p1>
+            <p1 class="infobox-text">all the sprites in my games were drawn in photoshop. For sound I usually use
+              music from <a href="https://incompetech.com/" target="_blank">incompetech</a> which has a giant library of
+              royalty free
+              music. As for general SFX I usually use <span><a href="https://sfxr.me/" target="_blank">jsfxr</a></span>
+            </p1>
           </div>
         </div>
       </div>
@@ -79,10 +95,10 @@
     <section>
       <div class="projects">
         <center>
-          <h1 class="section-title">projects</h1>
+          <h1 class="section-title">Projects</h1>
         </center>
         <div class="infobox-collection">
-          <div class="infobox hiding" style="height:700px;width:800px">
+          <div class="infobox hiding" style="height:700px;width:1000px">
             <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I
               recently learned Godot but most of my projects are made with pygame. I am currently trying out raylib with
               C so I can export it with emscripten
@@ -94,6 +110,39 @@
           </div>
         </div>
       </div>
+    </section>
+    <hr class="divider" style="background-color: rgb(192, 124, 221);margin-top: 30px;margin-bottom: 30px;">
+    <section>
+      <div class="Connections">
+        <center>
+          <h1 class="section-title">Connections</h1>
+        </center>
+        <div class="infobox-collection">
+          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+            onclick="redirect(`https://ham-sandwich47.itch.io/`)">
+            <div class="connection-logo">
+              <img src="./images/logos/itchio.png">
+            </div>
+            <p1 class="connection-infobox-text">Itch.io is a site for hosting games, I don't really have any games on it
+              right now,
+              but I will add more as I start doing more game jams</p1>
+          </div>
+          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+            onclick="redirect(`https://discord.com/users/697035313998200932`)">
+            <div class="connection-logo">
+              <img src="./images/logos/discord.jpeg">
+            </div>
+            <p1 class="connection-infobox-text">discord is a site for degenerates, I also happen to be on there</p1>
+          </div>
+          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+            onclick="redirect(`https://www.github.com/Hammish48`)">
+            <div class="connection-logo">
+              <img src="./images/logos/github.png">
+            </div>
+            <p1 class="connection-infobox-text">github is a code hosting platform, some of my code is hosted on there
+            </p1>
+          </div>
+        </div>
     </section>
     <script>
       window.addEventListener("scroll", showInfoBoxes)
@@ -118,10 +167,12 @@
       }
     </script>
     <footer>
-      <h1>footer</h1>
+      <p id="copyright">This website is being hosted on GitHub pages under the MIT license Copyright &copy; 2023
+        Hammish48</p>
+      <a href="https://tasty.co/recipe/the-best-chewy-chocolate-chip-cookies" target="_blank"><img
+          src="./images/icons/cookie.png" height="60px"></a>
     </footer>
   </div>
-
 </body>
 
 </html>
