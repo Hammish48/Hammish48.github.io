@@ -194,10 +194,17 @@ footer {
     color: white;
     margin-right: 0px;
     display: flex;
+    height:60px
+}
+
+footer a{
+    position: absolute;
 }
 
 footer img{
-    transform: translate(815px, 2px);
+    transform: translate(93vw);
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .Connections{
