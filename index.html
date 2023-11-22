@@ -72,14 +72,14 @@
               learn C++ so I can create web games with Raylib</p1>
           </div>
           <script>
-            async function getLeetcodeData(user) {
-              let response = await fetch(`https://leetcodestats.cyclic.app/${user}`)
-              let object = await response.json().then((data) => {
-                s = document.getElementById("leetcode-problems")
-                s.textContent = data["totalSolved"]
-              })
-            }
-            getLeetcodeData("hammish")
+            //async function getLeetcodeData(user) {
+            //  let response = await fetch(`https://leetcodestats.cyclic.app/${user}`)
+            //  let object = await response.json().then((data) => {
+            //    s = document.getElementById("leetcode-problems")
+            //    s.textContent = data["totalSolved"]
+            //  })
+            //}
+            //getLeetcodeData("hammish")
           </script>
           <div class="infobox hiding" style="width:1250px;height:300px">
             <p1 class="infobox-text">all the sprites in my games were drawn in photoshop. For sound I usually use
@@ -146,7 +146,6 @@
     </section>
     <script>
       window.addEventListener("scroll", showInfoBoxes)
-
       function showInfoBoxes() {
         let boxesToShow = document.querySelectorAll(".infobox")
         for (let c = 0; c < boxesToShow.length; c++) {
@@ -166,12 +165,21 @@
         window.location.href = "./projects"
       }
     </script>
-    <footer>
+    <footer id="main-footer">
       <p id="copyright">This website is being hosted on GitHub pages under the MIT license Copyright &copy; 2023
         Hammish48</p>
       <a href="https://tasty.co/recipe/the-best-chewy-chocolate-chip-cookies" target="_blank"><img
           src="./images/icons/cookie.png" height="50px"></a>
     </footer>
+    <script>
+
+      window.addEventListener("scroll", () => {
+        const f = document.getElementById("main-footer")
+        const pageLeft = (f.getBoundingClientRect().bottom - window.innerHeight) / 4029.6
+        console.log(pageLeft)
+        document.getElementsByTagName("body")[0].style.backgroundColor = `hsl(${800 + (120 * pageLeft)}, 90%, 90%)`
+      })
+    </script>
   </div>
 </body>
 
