@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <title>Hamsandwich</title>
+  <link rel="icon" type="image/png" href="./images/home.png" sizes="16x16">
 </head>
 
 <body>
@@ -53,23 +54,27 @@
         </center>
         <div class="infobox-collection">
           <div class="infobox hiding" style="width:600px; height:500px;">
-            <p1 class="infobox-text">I'm Hamish, I'm a amateur programmer and game developer from Australia. I
-              first
-              started
-              learning python around early 2021, since then I have made a few minor games and branched out into other
-              languages such as c# and javascript</p1>
+            <div class="infobox-text-container">
+              <p1 class="infobox-text">I'm Hamish, I'm a amateur programmer and game developer from Australia. I
+                first
+                started
+                learning python around early 2021, since then I have made a few minor games and branched out into other
+                languages such as c# and javascript</p1>
+            </div>
           </div>
           <div class="infobox hiding" style="width:600px; height:500px;">
-            <p1 class="infobox-text">I have competed in 3 game jams so far (pyweek 35, GMTK 2023, pyweek 36). I usally
-              use
-              either <a href="https://www.pygame.org/wiki/about" target="_blank">Pygame</a> or <a
-                href="https://godotengine.org/" target="_blank">Godot</a> to
-              create games but I
-              recently started getting
-              into
-              raylib
-              for dotnet. I hope to
-              learn C++ so I can create web games with Raylib</p1>
+            <div class="infobox-text-container">
+              <p1 class="infobox-text">I have competed in 3 game jams so far (pyweek 35, GMTK 2023, pyweek 36). I usally
+                use
+                either <a href="https://www.pygame.org/wiki/about" target="_blank">Pygame</a> or <a
+                  href="https://godotengine.org/" target="_blank">Godot</a> to
+                create games but I
+                recently started getting
+                into
+                raylib
+                for dotnet. I hope to
+                learn C++ so I can create web games with Raylib</p1>
+            </div>
           </div>
           <script>
             //async function getLeetcodeData(user) {
@@ -81,12 +86,17 @@
             //}
             //getLeetcodeData("hammish")
           </script>
+          <br>
           <div class="infobox hiding" style="width:1250px;height:300px">
-            <p1 class="infobox-text">all the sprites in my games were drawn in photoshop. For sound I usually use
-              music from <a href="https://incompetech.com/" target="_blank">incompetech</a> which has a giant library of
-              royalty free
-              music. As for general SFX I usually use <span><a href="https://sfxr.me/" target="_blank">jsfxr</a></span>
-            </p1>
+            <div class="infobox-text-container">
+              <p1 class="infobox-text">all the sprites in my games were drawn in photoshop. For sound I usually use
+                music from <a href="https://incompetech.com/" target="_blank">incompetech</a> which has a giant library
+                of
+                royalty free
+                music. As for general SFX I usually use <span><a href="https://sfxr.me/"
+                    target="_blank">jsfxr</a></span>
+              </p1>
+            </div>
           </div>
         </div>
       </div>
@@ -99,13 +109,18 @@
         </center>
         <div class="infobox-collection">
           <div class="infobox hiding" style="height:700px;width:1000px">
-            <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I
-              recently learned Godot but most of my projects are made with pygame. I am currently trying out raylib with
-              C++ so I can compile games to windows and wasm
-            </p1>
+            <div class="infobox-text-container">
+              <p1 class="infobox-text">I have made a few minor projects, mostly games that I export to web assembly. I
+                recently learned Godot but most of my projects are made with pygame. I am currently trying out raylib
+                with
+                C++ so I can compile games to windows and wasm
+              </p1>
+            </div>
             <div class="projects-button-container">
-              <button class="projects-page-button" onclick="gototheprojectspageandstuff()">View
-                All Projects</button>
+              <div class="projects-page-button selection" onclick="gototheprojectspageandstuff()">
+                <h1><img src="./images/projects.png">View
+                  All Projects</h1>
+              </div>
             </div>
           </div>
         </div>
@@ -118,7 +133,7 @@
           <h1 class="section-title">Connections</h1>
         </center>
         <div class="infobox-collection">
-          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+          <div class="infobox hiding connection-infobox selection" style="height:190px;width:800px"
             onclick="redirect(`https://ham-sandwich47.itch.io/`)">
             <div class="connection-logo">
               <img src="./images/logos/itchio.png">
@@ -128,7 +143,7 @@
               but I will add more as I start doing more game jams</p1>
           </div>
           <br>
-          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+          <div class="infobox hiding connection-infobox selection" style="height:190px;width:800px"
             onclick="redirect(`https://discord.com/users/697035313998200932`)">
             <div class="connection-logo">
               <img src="./images/logos/discord.jpeg">
@@ -136,7 +151,7 @@
             <p1 class="connection-infobox-text">discord is a site for degenerates, I also happen to be on there</p1>
           </div>
           <br>
-          <div class="infobox hiding connection-infobox" style="height:190px;width:800px"
+          <div class="infobox hiding connection-infobox selection" style="height:190px;width:800px"
             onclick="redirect(`https://www.github.com/Hammish48`)">
             <div class="connection-logo">
               <img src="./images/logos/github.png">

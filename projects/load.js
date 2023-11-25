@@ -118,6 +118,7 @@ function createButtonContainer(options){
     for (let x = 0; x <= options.length - 1;x++){
         let btn = document.createElement("button")
         btn.className = "project-option-button"
+        btn.classList.add("selection")
         btn.textContent = options[x].name
         if (options[x].type == "redirect"){
             btn.onclick = ()=>{redirect(options[x].url)}

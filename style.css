@@ -10,6 +10,10 @@ body {
     background-color: hsl(255, 87%, 82%);
 }
 
+.selection:hover{
+    cursor:pointer;
+}
+
 @keyframes changebg {
     from {
         background-color: rgb(127, 184, 105);
@@ -149,41 +153,55 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px;
-    text-align: center;
-    display: inline-flex;
-    position:sticky;
+    display: inline-block;
     border: 3px solid black;
     border-radius: 15px;
-    text-wrap: pretty;
     box-shadow: 4px 8px 2px 1px rgba(0, 0, 255, .2);
     transition: all 1s ease;
     opacity: 1;
     background-color: white;
 }
 
+.infobox-text-container{
+    display: flex;
+}
+
 .infobox-text {
-    padding: 80px;
+    margin:70px;
+    transform: translateX(10%);
+    width: 70%;
     line-height: 50px;
     font-size: 22px;
     font-style: italic;
     font-family: 'Fira Sans', sans-serif;
+    text-align: center;
 }
 
 .projects-page-button{
-    height:100%;
-    background-color: rgb(77, 77, 220);
-    width:300%;
-    height: 9%;
-    display: inline-block;
-    transform: translate(-345%, 980%);
+    width: 30%;
+    background-color: rgb(56, 41, 255);
+    transition: background-color 0.3s ease;
     border-radius: 4px;
+    height: 60px;
     font-size: 20px;
     font-style: oblique;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid black;
+    transform: translateY(450%);
+}
+
+.projects-page-button h1{
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.projects-page-button img{
+    transform: translate(-99%, 31%);
+    font-size: 20px;
 }
 
 .projects-page-button:hover{
-    background-color: rgb(27, 27, 223);;
+    background-color: rgb(16, 225, 221);;
 }
 
 .hiding {
@@ -234,6 +252,10 @@ footer img{
 }
 
 .connection-infobox{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    display: inline-flex;
     transition: scale 0.2s, transform 1s ease, opacity 1s ease;
 }
 
