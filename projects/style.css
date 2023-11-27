@@ -131,6 +131,7 @@ body{
     box-shadow: 0px 0px 4px 4px rgb(39, 132, 141);
     background-color: aquamarine;
     background-image: none;
+    cursor:default;
 }
 
 .project:hover p1{
@@ -177,7 +178,6 @@ footer a{
 }
 
 footer img{
-    transform: translate(90vw);
     margin-top: 5px;
     margin-bottom: 0px;
 }

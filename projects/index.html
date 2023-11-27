@@ -35,12 +35,19 @@
         </div>
         <script src="./load.js"></script>
         <script src="./main.js"></script>
-        <footer>
+        <footer id="main-footer">
             <p id="copyright">This website is being hosted on GitHub pages under the MIT license Copyright &copy; 2023
                 Hammish48</p>
             <a href="https://tasty.co/recipe/the-best-chewy-chocolate-chip-cookies" target="_blank"><img
-                    src="../images/icons/cookie.png" height="50px"></a>
+                    id="footer-cookie" src="../images/icons/cookie.png" height="50px"></a>
         </footer>
+        <script>
+            if (!navigator.userAgentData.mobile) {
+                const a = document.getElementById("footer-cookie");
+                console.log(a)
+                a.style.transform = `translateX(${document.getElementById("main-footer").clientWidth - 60}px)`
+            }
+        </script>
     </div>
 </body>
 
