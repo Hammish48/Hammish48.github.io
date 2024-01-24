@@ -57,7 +57,7 @@ body {
 
 .cover-animation-play{
     animation:
-    typing 1.8s steps(38, end),
+    typing 1.8s steps(21, end),
     blink-caret .9s step-end infinite;
 }
 
