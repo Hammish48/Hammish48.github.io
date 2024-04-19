@@ -1,183 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body{
-    background-color: rgb(42, 122, 42);
-    padding: 0px;
-    border:0px;
-    margin: 0px;
-    width:100%;
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+	background-color: rgb(42, 122, 42);
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	width: 100%;
 }
 
-.selection:hover{
-    cursor:pointer;
+.selection:hover {
+	cursor: pointer;
 }
 
-.home-button{
-    margin: 5px;
+.home-button {
+	margin: 5px;
 }
 
-.home-button:hover{
-    transform: scale(1.1);
+.home-button:hover {
+	transform: scale(1.1);
 }
 
-.content{
-    margin-left: 70px;
-    margin-right: 70px;
-    background-color: rgb(62, 220, 235);
-    box-shadow: 0px 0px 0px 6px rgba(11, 95, 2, 0.407);
-    display: block;
-    overflow-x: hidden;
+.content {
+	margin-left: 70px;
+	margin-right: 70px;
+	background-color: rgb(62, 220, 235);
+	box-shadow: 0px 0px 0px 6px rgba(11, 95, 2, 0.407);
+	display: block;
+	overflow-x: hidden;
 }
 
 .section-title {
-    text-align: center;
-    padding: 10px;
-    left: 40%;
-    letter-spacing: 3px;
-    font-size: 100px;
-    border: 3px solid;
-    display: inline-block;
-    border-radius: 10px;
-    background-color: azure;
-    font-family: 'Lato', sans-serif;
+	text-align: center;
+	padding: 10px;
+	left: 40%;
+	letter-spacing: 3px;
+	font-size: 100px;
+	border: 3px solid;
+	display: inline-block;
+	border-radius: 10px;
+	background-color: azure;
+	font-family: "Lato", sans-serif;
 }
-.projects{
-    justify-content:center;
-    align-items: center;
-    font-family: "Barlow", sans-serif;
-    padding:5px;
-    overflow-y: hidden;
-    margin-bottom: 20px;
-}
-
-.row{
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.projects {
+	justify-content: center;
+	align-items: center;
+	font-family: "Barlow", sans-serif;
+	padding: 5px;
+	overflow-y: hidden;
+	margin-bottom: 20px;
 }
 
-
-
-.box-container{
-    height:100%;
-    padding: 10px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline-flex;
-    position: relative;
+.row {
+	justify-content: center;
+	align-items: center;
+	display: flex;
 }
 
-.project{
-    transform: scale(1);
-    transition: transform 0.2s;
-    height:500px;
-    width:500px;
-    box-shadow: 0px 0px 4px 4px rgb(48, 165, 176);
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    position: relative;
-    margin-bottom: 10px;
+.box-container {
+	height: 100%;
+	padding: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	display: inline-flex;
+	position: relative;
 }
 
-
-.project img{
-    width:100%;
-    height:100%;
-    border-radius: 6px;
+.project {
+	transform: scale(1);
+	transition: transform 0.2s;
+	height: 500px;
+	width: 500px;
+	box-shadow: 0px 0px 4px 4px rgb(48, 165, 176);
+	border-radius: 10px;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+	margin-bottom: 10px;
 }
 
-.project-content-container{
-    padding:15px;
-    text-align: center;
-    display: none;
+.project img {
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
 }
 
-.project:hover .project-content-container{
-    display:block;
+.project-content-container {
+	padding: 15px;
+	text-align: center;
+	display: none;
 }
 
-.project:hover img{
-    display: none;
+.project:hover .project-content-container {
+	display: block;
 }
 
-.project:hover h1{
-    display: none;
-    opacity: 0%;
-}
-.project h1{
-    opacity: 100%;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    border-radius: 5px;
-    position: absolute;
-    left:50%;
-    transform: translate(-50%);
-    width: 80%;
-    padding-bottom: 3px;
-}
-.project p1{
-    opacity: 0%;
-    display: block;
-    height:350px;
-    font-size: 20px;
-    line-height: 30px;
+.project:hover img {
+	display: none;
 }
 
-
-.project:hover{
-    transform: scale(1.04);
-    box-shadow: 0px 0px 4px 4px rgb(39, 132, 141);
-    background-color: aquamarine;
-    background-image: none;
-    cursor:default;
+.project:hover h1 {
+	display: none;
+	opacity: 0%;
+}
+.project h1 {
+	opacity: 100%;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid black;
+	border-radius: 5px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 80%;
+	padding-bottom: 3px;
+}
+.project p1 {
+	opacity: 0%;
+	display: block;
+	height: 350px;
+	font-size: 20px;
+	line-height: 30px;
 }
 
-.project:hover p1{
-    opacity: 100%;
+.project:hover {
+	transform: scale(1.04);
+	box-shadow: 0px 0px 4px 4px rgb(39, 132, 141);
+	background-color: aquamarine;
+	background-image: none;
+	cursor: default;
 }
 
-
-
-.project-option-button-container{
-    opacity: 0%;
-    display: grid;
-    padding: 10px;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    border-radius: 5px;
+.project:hover p1 {
+	opacity: 100%;
 }
 
-.project:hover .project-option-button-container{
-    opacity: 100%;
+.project-option-button-container {
+	opacity: 0%;
+	display: grid;
+	padding: 10px;
+	background-color: rgb(255, 255, 255);
+	border: 2px solid black;
+	border-radius: 5px;
 }
 
-.project-option-button{
-    padding: 3px;
-    margin: 2px;
-    font-size: 90%;
-    border: 4px solid black;
-    border-radius: 5px;
-    background-color: aqua;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+.project:hover .project-option-button-container {
+	opacity: 100%;
+}
 
+.project-option-button {
+	padding: 3px;
+	margin: 2px;
+	font-size: 90%;
+	border: 4px solid black;
+	border-radius: 5px;
+	background-color: aqua;
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+}
+
+.project-type-selection {
+	padding-left: 100px;
+	display: flex;
+}
+
+.project-type-button {
+	padding: 5px;
+	margin: 5px;
+	font-size: 90%;
+	border: 4px solid black;
+	border-radius: 5px;
+	background-color: rgb(0, 255, 157);
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	box-shadow: 3px 3px 0px 0px rgb(44, 92, 181);
+	margin-right: 5px;
+	transition: 0.3s ease-in-out;
+}
+
+.project-type-button:hover {
+	cursor: pointer;
+	background-color: rgb(14, 122, 21);
+	transform: scale(1.1);
 }
 
 footer {
-    background-color: black;
-    color: white;
-    margin-right: 0px;
-    display: flex;
-    height:60px
+	background-color: black;
+	color: white;
+	margin-right: 0px;
+	display: flex;
+	height: 60px;
 }
 
-footer a{
-    position: absolute;
+footer a {
+	position: absolute;
 }
 
-footer img{
-    margin-top: 5px;
-    margin-bottom: 0px;
+footer img {
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
