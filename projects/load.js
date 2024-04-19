@@ -36,17 +36,25 @@ class Option {
 	}
 }
 class Download extends Option {
-	constructor(name, file, color = [255, 255, 255]) {
+	constructor(name, file, color = [0, 255, 115]) {
 		super(color, "download");
 		this.file = file;
 		this.name = name;
 	}
 }
 class Redirect extends Option {
-	constructor(name, url, color = [255, 255, 255]) {
+	constructor(name, url, color = [0, 255, 255]) {
 		super(color, "redirect");
 		this.url = url;
 		this.name = name;
+	}
+}
+
+class Alert extends Option {
+	constructor(name, msg, color = [0, 255, 255]) {
+		super(color, "alert");
+		this.name = name;
+		this.msg = msg;
 	}
 }
 
@@ -141,7 +149,7 @@ sites.push(
 		"my portfolio website <br> I made this website to showcase my projects and to learn more about web development <br> I'm quite happy with how it turned out <br> if you're learning web development I would highly recommend a project like this",
 		"thumbnails/portfolio.png",
 		[
-			new Redirect("Go there", "https://hamsandwich.xyz"),
+			new Alert("Go There", ":|"),
 			new Redirect(
 				"View on GitHub",
 				"https://github.com/Hammish48/Hammish48.github.io"
@@ -226,10 +234,15 @@ function createButtonContainer(options) {
 		let btn = document.createElement("button");
 		btn.className = "project-option-button";
 		btn.classList.add("selection");
+		btn.style.backgroundColor = `rgb(${options[x].color[0]}, ${options[x].color[1]}, ${options[x].color[2]})`;
 		btn.textContent = options[x].name;
 		if (options[x].type == "redirect") {
 			btn.onclick = () => {
 				redirect(options[x].url);
+			};
+		} else if (options[x].type == "alert") {
+			btn.onclick = () => {
+				alert(options[x].msg);
 			};
 		} else {
 			btn.onclick = () => {
