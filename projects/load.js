@@ -204,7 +204,7 @@ games.push(
 games.push(
 	new Project(
 		"7 Day Fishing Trip",
-		"A game made for the FishFest game jam, a week long game jam were you just had to make some sort of game involving fish <br> at first I thought I was going to make a small high score based game but I kept adding ideas until this became my biggest project yet",
+		"A game made for the FishFest 2024 game jam, a week long game jam were you just had to make some sort of game involving fish <br> at first I thought I was going to make a small high score based game but I kept adding ideas until this became my biggest project yet",
 		"thumbnails/7-day-fishing-trip.png",
 		[
 			new Redirect("Play", "../play/7-day-fishing-trip"),
