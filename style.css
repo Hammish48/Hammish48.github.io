@@ -1,269 +1,262 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&family=Roboto+Mono&display=swap");
 body {
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    overflow-x: clip;
-    position:static;
-    background-color: hsl(255, 87%, 82%);
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	overflow-x: clip;
+	position: static;
+	background-color: hsl(255, 87%, 82%);
 }
 
-.selection:hover{
-    cursor:pointer;
+.selection:hover {
+	cursor: pointer;
 }
 
 @keyframes changebg {
-    from {
-        background-color: rgb(127, 184, 105);
-    }
+	from {
+		background-color: rgb(127, 184, 105);
+	}
 
-    to {
-        background-color: rgb(146, 192, 255);
-    }
+	to {
+		background-color: rgb(146, 192, 255);
+	}
 }
 
 .cover {
-    margin-bottom: 0px;
-    border-bottom: 0px;
-    padding-bottom: 0%;
+	margin-bottom: 0px;
+	border-bottom: 0px;
+	padding-bottom: 0%;
 }
 
 .cover img {
-    border: 0px;
-    width: 100%;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    margin: 0px;
-    display: block;
+	border: 0px;
+	width: 100%;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin: 0px;
+	display: block;
 }
 
 .cover h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(240, 240, 240);
-    font-size: 3vw;
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    letter-spacing: 3px;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Mono', monospace;
-    opacity: 0%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(240, 240, 240);
+	font-size: 3vw;
+	overflow: hidden;
+	border-right: 0.15em solid orange;
+	white-space: nowrap;
+	letter-spacing: 3px;
+	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Mono", monospace;
+	opacity: 0%;
 }
 
-.cover-animation-play{
-    animation:
-    typing 1.8s steps(19, end),
-    blink-caret .9s step-end infinite;
+.cover-animation-play {
+	animation: typing 1.8s steps(19, end), blink-caret 0.9s step-end infinite;
 }
 
-.cover-animation-container{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 30%;
-    width: 45%;
+.cover-animation-container {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 30%;
+	width: 45%;
 }
 
 .cover h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-family: "CoverFont";
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-family: "CoverFont";
+	font-size: 20px;
+	color: rgb(255, 255, 255);
 }
 
 @keyframes typing {
-    from {
-        width: 0%
-    }
+	from {
+		width: 0%;
+	}
 
-    to {
-        width: 77%
-    }
+	to {
+		width: 77%;
+	}
 }
 
 @keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
 
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: rgb(123, 137, 255);
-    }
+	50% {
+		border-color: rgb(123, 137, 255);
+	}
 }
 
 .cover h2 {
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    color: white;
-    outline: 2px;
-    font-family: "CoverFont";
-    font-size: 30px;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	color: white;
+	outline: 2px;
+	font-family: "CoverFont";
+	font-size: 30px;
 }
 
 .divider {
-    padding-top: 0%;
-    margin-top: 0px;
-    margin-right: 0%;
-    width: 100%;
-    height: 40px;
-    border-top: 3px solid rgb(121, 121, 121);
-    border-bottom: 3px solid rgb(121, 121, 121);
-    background-color: rgb(47, 97, 63);
+	padding-top: 0%;
+	margin-top: 0px;
+	margin-right: 0%;
+	width: 100%;
+	height: 40px;
+	border-top: 3px solid rgb(121, 121, 121);
+	border-bottom: 3px solid rgb(121, 121, 121);
+	background-color: rgb(47, 97, 63);
 }
 
 .who {
-    margin: 0px;
-    border: 5px;
-    padding: 0px;
+	margin: 0px;
+	border: 5px;
+	padding: 0px;
 }
 
-
 .section-title {
-    text-align: center;
-    padding: 10px;
-    left: 40%;
-    letter-spacing: 3px;
-    font-size: 100px;
-    border: 3px solid;
-    display: inline-block;
-    border-radius: 10px;
-    background-color: lightslategrey;
+	text-align: center;
+	padding: 10px;
+	left: 40%;
+	letter-spacing: 3px;
+	font-size: 100px;
+	border: 3px solid;
+	display: inline-block;
+	border-radius: 10px;
+	background-color: lightslategrey;
 }
 
 .infobox-collection {
-    align-items: center;
-    text-align: center;
-    overflow-x: clip;
+	align-items: center;
+	text-align: center;
+	overflow-x: clip;
 }
 
 .infobox {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 10px;
-    display: inline-block;
-    border: 3px solid black;
-    border-radius: 15px;
-    box-shadow: 4px 8px 2px 1px rgba(0, 0, 255, .2);
-    transition: all 1s ease;
-    opacity: 1;
-    background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+	display: inline-block;
+	border: 3px solid black;
+	border-radius: 15px;
+	box-shadow: 4px 8px 2px 1px rgba(0, 0, 255, 0.2);
+	transition: all 1s ease;
+	opacity: 1;
+	background-color: white;
 }
 
-.infobox-text-container{
-    display: flex;
+.infobox-text-container {
+	display: flex;
 }
 
 .infobox-text {
-    margin:70px;
-    transform: translateX(10%);
-    width: 70%;
-    line-height: 50px;
-    font-size: 22px;
-    font-style: italic;
-    font-family: 'Fira Sans', sans-serif;
-    text-align: center;
+	margin: 50px;
+	width: 80%;
+	line-height: 50px;
+	font-size: 22px;
+	font-style: italic;
+	font-family: "Fira Sans", sans-serif;
+	text-align: center;
 }
 
-.projects-page-button{
-    width: 30%;
-    background-color: rgb(56, 41, 255);
-    transition: background-color 0.3s ease;
-    border-radius: 4px;
-    height: 60px;
-    font-size: 20px;
-    font-style: oblique;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: 2px solid black;
-    transform: translateY(450%);
+.projects-page-button {
+	width: 30%;
+	background-color: rgb(56, 41, 255);
+	transition: background-color 0.3s ease;
+	border-radius: 4px;
+	height: 60px;
+	font-size: 20px;
+	font-style: oblique;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	border: 2px solid black;
+	transform: translateY(200%);
 }
 
-.projects-page-button h1{
-    transform: translateY(-50%);
-    font-size: 20px;
+.projects-page-button h1 {
+	transform: translateY(-50%);
+	font-size: 20px;
 }
 
-.projects-page-button img{
-    transform: translate(-99%, 31%);
-    font-size: 20px;
+.projects-page-button img {
+	transform: translate(-99%, 31%);
+	font-size: 20px;
 }
 
-.projects-page-button:hover{
-    background-color: rgb(16, 225, 221);;
+.projects-page-button:hover {
+	background-color: rgb(16, 225, 221);
 }
 
 .hiding {
-    transform: translate(300px, 0px);
-    opacity: 0;
+	transform: translate(300px, 0px);
+	opacity: 0;
 }
 
 footer {
-    background-color: black;
-    color: white;
-    margin-right: 0px;
-    display: flex;
-    height:60px
+	background-color: black;
+	color: white;
+	margin-right: 0px;
+	display: flex;
+	height: 60px;
 }
 
-footer a{
-    position: absolute;
+footer a {
+	position: absolute;
 }
 
-footer img{
-    transform: translate(93vw);
-    margin-top: 5px;
-    margin-bottom: 0px;
+footer img {
+	transform: translate(93vw);
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
 
-.Connections{
-    padding: 10px;
-    margin-top: 30px;
-    margin-bottom: 70px;
+.Connections {
+	padding: 10px;
+	margin-top: 30px;
+	margin-bottom: 70px;
 }
 
-.connection-logo img{
-    border: 4px solid black;
-    height: 120px;
-    width: 120px;
-    border-radius: 100px;
-    margin: 30px;
-
+.connection-logo img {
+	border: 4px solid black;
+	height: 120px;
+	width: 120px;
+	border-radius: 100px;
+	margin: 30px;
 }
 
-.connection-infobox-text{
-    padding:10px;
-    margin-top: 25px;
-    line-height: 50px;
-    font-size: 18px;
-    font-style: italic;
-    font-family: 'Fira Sans', sans-serif;
+.connection-infobox-text {
+	padding: 10px;
+	margin-top: 25px;
+	line-height: 50px;
+	font-size: 18px;
+	font-style: italic;
+	font-family: "Fira Sans", sans-serif;
 }
 
-.connection-infobox{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 0px;
-    display: inline-flex;
-    transition: scale 0.2s, transform 1s ease, opacity 1s ease;
+.connection-infobox {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	display: inline-flex;
+	transition: scale 0.2s, transform 1s ease, opacity 1s ease;
 }
 
-.connection-infobox:hover{
-    scale:1.05;
+.connection-infobox:hover {
+	scale: 1.05;
 }
 
 @font-face {
-    font-family: 'CoverFont';
-    src: url('fonts/coverfont.otf') format('opentype');
+	font-family: "CoverFont";
+	src: url("fonts/coverfont.otf") format("opentype");
 }
