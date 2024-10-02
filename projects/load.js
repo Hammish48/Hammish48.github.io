@@ -225,6 +225,22 @@ games.push(
 	)
 );
 
+games.push(
+	new Project(
+		"Conductive Caverns",
+		'This was my second major raylib/C++ game <br>A cave based metroidvania made for my school game jam which had the theme "power source"<br><br> I used elements of a platformer that got scrapped and I learnt how to do SAT collisions for the spikes <br><br>Music is "8bit Dungeon Level" by Kevin MacLeod',
+		"thumbnails/c_caverns.png",
+		[
+			new Redirect("Play", "../play/c_caverns"),
+			new Download("Download (.exe)", "../downloads/c_caverns.zip"),
+			new Redirect(
+				"View on Itch.io",
+				"https://ham-sandwich47.itch.io/conductive-caverns"
+			),
+		]
+	)
+);
+
 console.log(order);
 
 function createButtonContainer(options) {

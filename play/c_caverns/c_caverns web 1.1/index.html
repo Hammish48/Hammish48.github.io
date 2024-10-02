@@ -1,0 +1,78 @@
+<!doctypehtml>
+    <html lang=EN-us>
+
+    <head>
+        <meta charset=utf-8>
+        <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+        <title>Conductive Caverns | Hamsandwich.xyz</title>
+        <meta content="Conductive caverns" name=title>
+        <meta content="Conductive caverns, 2024, hamsandwich.xyz" name=description>
+        <meta
+            content="raylib, games, html5, programming, C, C++, library, learn, videogames, hamsandwich, conductive, caverns, hamsandwich.xyz, metroid, vania"
+            name=keywords>
+        <meta content="width=device-width" name=viewport>
+        <meta content="Conductive Caverns" property=og:title>
+        <meta content=image/png property=og:image:type>
+        <meta content=./favicon.png property=og:image>
+        <meta content=raylib.com property=og:site_name>
+        <meta content=https://www.raylib.com/games.html property=og:url>
+        <meta content="Conductive caverns, 2024, hamsandwich.xyz" property=og:description>
+        <meta content=summary name=twitter:card>
+        <meta content=@raysan5 name=twitter:site>
+        <meta content="Condutive caverns" name=twitter:title>
+        <meta content=https://www.raylib.com/common/raylib_logo.png name=twitter:image>
+        <meta content=https://www.raylib.com/games.html name=twitter:url>
+        <meta content="New raylib web game, developed using raylib videogames library" name=twitter:description>
+        <link href=./favicon.png rel="shortcut icon">
+        <style>
+            body {
+                margin: 0;
+                background-color: #2c251f;
+            }
+
+            canvas.emscripten {
+                border: 0 none;
+                background-color: #000;
+                height: 720px;
+                margin-bottom: 0px;
+                width: 1280px;
+                padding: 0px;
+                display: block;
+
+            }
+
+            .betterbtn {
+                background-color: #5a5bfa;
+                height: 20px;
+                width: 120px;
+                border: #000 2px solid;
+                cursor: pointer;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .betterbtn:hover {
+                background-color: #ff4c49;
+                margin: 0px;
+            }
+        </style>
+        <script src=https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js/dist/FileSaver.min.js></script>
+        <script>function saveFileFromMEMFSToDisk(e, a) { var i, o = FS.readFile(e); i = new Blob([o.buffer], { type: "application/octet-binary" }), saveAs(i, a) }</script>
+    </head>
+
+    <body>
+        <center>
+            <div class="outer">
+                <canvas class=emscripten id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas>
+                <footer style="background-color: #3e3125;width: 1280px;display: flex;">
+                    <div class="betterbtn" onclick="Module.requestFullscreen(!1,!1)">
+                        FULLSCREEN</div>
+                </footer>
+            </div>
+        </center>
+        <p id=output>
+            <script>var Module = { print: function () { var e = document.getElementById("output"); return e && (e.value = ""), function (n) { arguments.length > 1 && (n = Array.prototype.slice.call(arguments).join(" ")), console.log(n), e && (e.value += n + "\n", e.scrollTop = e.scrollHeight) } }(), canvas: document.getElementById("canvas") }</script>
+            <script src=index.js async></script>
+    </body>
+
+    </html>
